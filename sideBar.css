@@ -1,0 +1,48 @@
+div#LeButtons li{
+    margin: 0 0 20px;
+    z-index:1;
+    width:100%;
+    display:block;
+    justify-items:center;
+    justify-content:center;
+}
+
+#LeButtons{
+    padding-top:10%;
+    width:100%;
+    max-width:100%;
+    align-items:center;
+    text-align:center;
+}
+#LeButtons ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+div#LeButtons li a{
+	padding: 8px;
+    z-index:3;
+    width:80%;
+	color:#6d1414;
+	background: radial-gradient(rgb(8, 198, 169), rgb(190, 190, 190));
+	border:1px solid #ffffff;
+	border-radius: 8px;  
+	text-decoration: none;
+	display: block ;
+}
+#LeButtons li a:hover{
+    animation: buttonHover 0.5s forwards;
+}
+#LeButtons li a:not(:hover){
+    animation: buttonHover 0.5s reverse;
+}
+@keyframes buttonHover{
+    0%{
+        transform:translateY(0);
+        box-shadow: 0 0 1px rgba(12, 13, 20, 0.4);
+    }
+    100%{
+        transform:translateY(-7px);
+        box-shadow: 0 30px 30px rgba(16, 17, 25, 0.4);
+    }
+}
