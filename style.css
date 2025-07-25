@@ -9,56 +9,97 @@ h1{
     align-content:center;
     justify-items:center;
     align-items:center;
-    background-image:url("Images/Header-Background.jpg");
-    background-size:100vw;
     background-position:absolute;
     background-position-y:center;
-
+    position:fixed;
     color:rgb(0, 0, 0);
     z-index:0;
     position:absolute;
     top: 0px;
     left:0px;
-    flex:1;
     grid-row-end:-1;
     grid-area:header;
 
+}
+#About{
+    background-image:url("Images/Header-Background.jpg");
+    background-size:100vw;
+    background-size:100%;
+}
+#Blog{
+    background-image:url("Images/BlogPost.jpg");
+    background-position-y:bottom;
+    background-size:100vw;
+}
+body{
+    overflow-y:hidden;
+}
+#subTitle{
+    font-size:50%;
+    margin:0;
+    padding:0;
+    color:white;
+    justify-content: center;
+    justify-self: center;
 }
 .formatGrid{
     position:absolute;
     top:0;
     left:0;
+    z-index:-1;
     height:100vh;
     width:100vw;
-    margin:0 0 0;
+    margin:0;
     display:grid;
     grid-template-areas:
         "header header"
         "sidebar body";
     grid-template-columns: 20% 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: minmax(10%,1fr) minmax(0%,70%)
 }
 button{
     max-width:100%;
     min-width:10%;
 }
-body{
+div#body{
+    font-size:90%;
+    margin-left:10%;
+    display:block;
+    height:auto;
+    overflow:auto;
+    justify-content:center;
+    justify-self:left;
+    justify-items:left;
+    width:100%;
     grid-area:body;
+    background-color:black;
+    color:white;
 }
-h1#Headertext{
+#Headertext{
     z-index:0;
     color:white;
     display:flex;
+    justify-content:center;
+    justify-self:center;
+    justify-items:center;
     width: 100vw;
     height:100%;
     position:absolute;
     top: 0px;
     left:0px;
 }
+title{
+    display:block;
+    color:white;
+    font-size:70%;
+    justify-content:center;
+    justify-self:center;
+    z-index:2;
+}
 div#sideCol{
     grid-area: sidebar;
     margin:0 0 0;
-    overflow-y:auto;
+    overflow-y:hidden;
     justify-items:center;
     display:block;   
     z-index:-1;
@@ -76,4 +117,5 @@ html{
     align-items:top;
     background-color:rgb(0, 0, 0);
     overflow-x:hidden;
+    overflow-y:hidden;
 }

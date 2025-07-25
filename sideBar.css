@@ -23,18 +23,15 @@ div#LeButtons li a{
 	padding: 8px;
     z-index:3;
     width:80%;
-	color:#6d1414;
-	background: radial-gradient(rgb(8, 198, 169), rgb(190, 190, 190));
+	color:#000000;
+	background: gray;
 	border:1px solid #ffffff;
 	border-radius: 8px;  
 	text-decoration: none;
 	display: block ;
 }
 #LeButtons li a:hover{
-    animation: buttonHover 0.5s forwards;
-}
-#LeButtons li a:not(:hover){
-    animation: buttonHover 0.5s reverse;
+    animation: buttonHover 0.2s forwards;
 }
 @keyframes buttonHover{
     0%{
@@ -42,7 +39,7 @@ div#LeButtons li a{
         box-shadow: 0 0 1px rgba(12, 13, 20, 0.4);
     }
     100%{
-        transform:translateY(-7px);
+        transform:translateY(-2px);
         box-shadow: 0 30px 30px rgba(16, 17, 25, 0.4);
     }
 }
