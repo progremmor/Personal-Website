@@ -37,6 +37,7 @@ body{
 }
 p{
     overflow-wrap:break-word;
+    font-family:'Courier';
     margin-left:10%;
     margin-right:10%;
 }
@@ -129,25 +130,25 @@ html{
     p.p1 {
         margin: 0.0px 0.0px 8.0px 0.0px;
         text-align: center;
-        font: 12.0px 'Calibre';
+        font: 12.0px 'Calibri';
         color: #000000
     }
 
     p.p2 {
         margin: 0.0px 0.0px 8.0px 0.0px;
-        font: 12.0px 'Calibre';
+        font: 12.0px 'Calibri';
         min-height: 15.0px
     }
 
     p.p3 {
         margin: 0.0px 0.0px 6.0px 0.0px;
-        font: 12.0px 'Calibre';
+        font: 12.0px 'Calibri';
         color: #000000
     }
 
     p.p4 {
         margin: 0.0px 0.0px 6.0px 0.0px;
-        font: 12.0px 'Calibre';
+        font: 12.0px 'Calibri';
         min-height: 15.0px
     }
 
