@@ -21,7 +21,7 @@ div#LeButtons li{
 }
 div#LeButtons li a{
 	padding: 8px;
-    z-index:3;
+    z-index:5;
     width:80%;
 	color:#000000;
 	background: gray;
