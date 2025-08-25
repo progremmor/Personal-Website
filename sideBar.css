@@ -24,7 +24,7 @@ div#LeButtons li a{
     z-index:3;
     width:80%;
 	color:#000000;
-	background: gray;
+	background: rgb(255, 255, 255);
 	border:1px solid #ffffff;
 	border-radius: 8px;  
 	text-decoration: none;
