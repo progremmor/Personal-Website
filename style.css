@@ -90,6 +90,8 @@ div#body {
     word-break: normal;
     overflow-wrap: break-word;
     justify-content: center;
+    padding:0;
+    margin:0;
     justify-self: left;
     justify-items: left;
     width: 100%;
@@ -156,8 +158,60 @@ image {
     height: 20vw;
 }
 
-#vex {
-    aspect-ratio: 1/1;
-    width: 15vw;
-    height: 20vw;
+.displayImg {
+    object-fit:fill;
+    position:relative;
+    flex:1;
+    flex-shrink:1;
+    display:block;
+    min-width:0;
+    margin:1%;
+}
+.displayImg:hover{
+    animation: lift 0.6s forwards;
+}
+.displayImg:not(:hover){
+    animation: drop 0.6s forwards;
+}
+#imgDisplay{
+    display:flex;
+    flex-flow:row nowrap;
+    position:relative;
+    justify-self:center;
+    justify-content:space-around;
+    align-content:flex-start;
+    flex-basis:1;
+    padding:0.5em;
+    width:70%;
+    height:70%;
+}
+@keyframes lift{
+    0%{
+        transform:translateY(0px);
+        box-shadow:none;
+        size:100%;  
+    }
+    30%{
+        size:200%;
+        box-shadow: 4px 9px 9px rgb(102, 102, 102);
+        transform:translateY(-12px);
+    }
+    100%{
+        transform:translateY(-5px);
+        box-shadow: 4px 4px 4px rgb(102, 102, 102);
+    }
+
+}
+@keyframes drop{
+    0%{
+        transform:translateY(-5px);
+        box-shadow: 4px 4px 4px rgb(102, 102, 102);
+        size:100%;  
+    }
+    100%{
+        transform:translateY(0px);
+        box-shadow:none;
+        size:100%;  
+    }
+    
 }
