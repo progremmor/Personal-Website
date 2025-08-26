@@ -1,6 +1,7 @@
 h1 {
     display: block;
     font-size: 500%;
+    z-index:5;
     width: 100vw;
     grid-row: span 2;
     margin-top: 0;
@@ -13,8 +14,9 @@ h1 {
     background-position-y: center;
     position: fixed;
     color: rgb(0, 0, 0);
+    box-shadow: 3px 3px 3px rgb(0, 0, 0);
     z-index: 0;
-    position: absolute;
+    position: relative;
     top: 0px;
     left: 0px;
     grid-row-end: -1;
@@ -46,6 +48,7 @@ body {
 
 p{
     overflow-wrap: break-word;
+    line-height: 2;
     font-family:'Arial';
     color:black;
     margin-left: 10%;
@@ -94,10 +97,12 @@ div#body {
     margin:0;
     justify-self: left;
     justify-items: left;
+    overflow-x:hidden;
     width: 100%;
     grid-area: body;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
+    z-index:-1;
 }
 
 #Headertext {
@@ -105,6 +110,7 @@ div#body {
     color: white;
     display: flex;
     justify-content: center;
+
     justify-self: center;
     justify-items: center;
     width: 100vw;
@@ -165,7 +171,9 @@ image {
     flex-shrink:1;
     display:block;
     min-width:0;
-    margin:1%;
+    max-width: 60%;
+    height:auto;
+    margin: 0 2%;
 }
 .displayImg:hover{
     animation: lift 0.6s forwards;
@@ -182,8 +190,8 @@ image {
     align-content:flex-start;
     flex-basis:1;
     padding:0.5em;
-    width:70%;
-    height:70%;
+    width:100%;
+    height:auto;
 }
 @keyframes lift{
     0%{
@@ -206,7 +214,6 @@ image {
     0%{
         transform:translateY(-5px);
         box-shadow: 4px 4px 4px rgb(102, 102, 102);
-        size:100%;  
     }
     100%{
         transform:translateY(0px);
