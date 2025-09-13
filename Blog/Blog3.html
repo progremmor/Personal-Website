@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../sideBar.css">
+    <title>Blog Posts</title>
+</head>
+
+<body>
+    <div class="formatGrid" z-index="-2">
+        <h1 id="Blog">
+            <div class="Headertext">
+                <title>Blog Posts</title>
+            </div>
+        </h1>
+        <div id="sideCol">
+            <div id="LeButtons">
+                <ul>
+                    <li><a z-index="4" href="../index.html"><strong>Home</strong></a></li>
+                    <li><a z-index="4" href="Blog.html"><strong>Blog Posts</strong></a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="body">
+            <p style="justify-self: center;"><strong></strong></p>
+            <p style="justify-self: center;"><strong></strong></p>
+            <p><br></p>
+            <div style="justify-self: center;">
+                <p style="font-size: 70%; justify-self:center"></p>
+                <p><strong>From Frustration to Flow: CSS Lessons I Wish I Knew Earlier</strong></p>
+                <p><strong>September 15, 2025</strong></p>
+                <p><img src="../Images/Blog-Image/Blog 3/blog 3_CSS frustration.png"
+                        alt="" width="624" height="468" name="Picture 1" border="0" /></p>
+                <p>HTML in web development feels relatively straightforward, but CSS, on the other hand, is an entirely
+                    different story. When I just started out, my images floated off into strange places, buttons looked
+                    different on every browser, and I had no idea why. It felt less like styling a page and more like
+                    managing a power plant.</p>
+                <p>It took me quite some time to realize that CSS isn&rsquo;t about memorizing every property.
+                    It&rsquo;s about learning how CSS works. If I could go back, there are a few lessons I wish I had
+                    picked up sooner.</p>
+                <p><strong>1. CSS is </strong><strong>more like creating rule sets than programming.</strong></p>
+                <p>At first, I treated CSS like JavaScript. I expected it to follow a strict order, a kind of
+                    step-by-step logic that would always give the same result. But CSS doesn&rsquo;t work that way.
+                    Instead, it plays by its own rules, <strong>the cascade, specificity, and inheritance</strong>. If
+                    you don&rsquo;t understand those, everything feels random.</p>
+                <p><strong>Lesson learned:</strong> Don&rsquo;t fight CSS as if it&rsquo;s broken. Learn how the
+                    cascade, specificity, and inheritance rules interact, and suddenly your styles become predictable
+                    instead of frustrating. And most importantly, organize your files so you can easily find them if
+                    something breaks.</p>
+                <p><strong>2. Flexbox and Grid are game changers.</strong></p>
+                <p>I used to spend hours doing nothing but trial and error to position objects on web pages. It was
+                    messy and inconsistent. Then I discovered <strong>Flexbox</strong> and <strong>Grid</strong>, and my
+                    world changed. <strong>Flexbox</strong> is perfect for one-dimensional layouts (e.g., navbars,
+                    button groups, centering things). <strong>Grid</strong> is for two-dimensional layouts (e.g., full
+                    page layouts, dashboards, card grids).</p>
+                <p><img src="../Images/Blog-Image/Blog 3/gridScrShot.png"></p>
+                <p><strong>Lesson learned:</strong> If you&rsquo;re still fighting with floating objects, stop. Flexbox
+                    and Grid are the cleaner way to build layouts, and offer way more possibilities.</p>
+                <p><strong>3. Units matter more than you think.</strong></p>
+                <p>Early on, I only used px for everything. Then my &ldquo;responsive design&rdquo; completely broke on
+                    different screen sizes.</p>
+                <p>CSS has <strong>relative units</strong> like %, em, rem, vh, and vw that scale beautifully. The
+                    clamp() function even lets you create <em>fluid</em> font sizes that adjust to the screen.</p>
+                <p><strong>Lesson learned:</strong> Pick units intentionally. Use rem for typography, % or fr for
+                    layout, and clamp() for responsiveness.</p>
+                <p><strong>4. CSS variables make life easier.</strong></p>
+                <p>I didn&rsquo;t even know CSS variables existed when I started. They let you define reusable values
+                    like colors, spacing, and fonts.</p>
+                <p><strong>Lesson learned:</strong> Stop hardcoding colors and sizes everywhere. Variables make your CSS
+                    cleaner and easier to update.</p>
+                <p><img src="../Images/Blog-Image/Blog 3/CustomPropPic.png"></p>   
+                <p><strong>5. The </strong><strong>b</strong><strong>rowser DevTools are Your best friend.</strong></p>
+                <p>I used to refresh my page a hundred times, tweaking CSS blindly. Then I discovered browser
+                    <strong>DevTools</strong>. With a right-click &rarr; &ldquo;Inspect,&rdquo; I could test styles
+                    live, see the box model, and debug layout issues instantly.</p>
+                <p><strong>Lesson learned:</strong> Spend less time guessing, more time using the tools built into the
+                    browser.</p>
+                <p><strong>My takeaways</strong></p>
+                <p>CSS can feel overwhelming at first. I used to think it was some kind of black magic. But the truth
+                    is, it&rsquo;s just a <strong>different way of thinking</strong>. The moment I stopped fighting
+                    against it and started learning its rules, CSS shifted from being my biggest frustration to one of
+                    the most enjoyable parts of building websites.</p>
+                <p>If you&rsquo;re just starting your journey, here&rsquo;s what I&rsquo;d suggest:</p>
+                    <ul style="list-style-type: none">
+                        <li>
+                            <p><strong>1. Learn the fundamentals</strong>: the cascade, specificity, and the box model are the
+                                backbone of everything.</p>
+                        </li>
+                        <li>
+                            <p><strong>2. Embrace modern tools</strong>: Flexbox, Grid, and CSS variables will make your life
+                                so much easier.</p>
+                        </li>
+                        <li>
+                            <p><strong>3. Experiment fearlessly</strong>: open up DevTools, tweak styles live, and see what
+                                happens. You&rsquo;ll learn faster than you expect.</p>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+    </footer>
+</body>
+
+</html>
