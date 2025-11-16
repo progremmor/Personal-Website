@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../sideBar.css">
+    <title>Blog Posts</title>
+</head>
+
+<body>
+    <div class="formatGrid" z-index="-2">
+        <h1 id="Blog">
+            <div class="Headertext">
+                <title>Blog Posts</title>
+            </div>
+        </h1>
+        <div id="sideCol">
+            <div id="LeButtons">
+                <ul>
+                    <li><a z-index="4" href="../index.html"><strong>Home</strong></a></li>
+                    <li><a z-index="4" href="Blog.html"><strong>Blog Posts</strong></a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="body">
+            <p style="justify-self: center;"><strong>Exploring Depth First Search (DFS) Algorithm</strong></p>
+            <p style="justify-self: center;"><strong></strong>November 15, 2025</p>
+            <p><br></p>
+            <div style="justify-self: center;">
+                <div style="text-align:center">
+                    <img style="justify-self:center;;width:25vw; height:auto"
+                        src="../Images/Blog-Image/Blog5/blog 5_DFS_2b.jpg">
+                </div>
+                <p>
+                    <strong>Depth First Search (DFS)</strong> is one of the fundamental algorithms every aspiring
+                    programmer should
+                    master, especially those preparing for the USA Computing Olympiad (USACO) or anyone passionate about
+                    problem-solving . In many coding problems, we face an unknown space made up of connected points,
+                    e.g., web pages, users, lines of code, or moves in a game. To understand how these points relate, we
+                    need an efficient way to explore and navigate the network.
+                    This is where DFS comes in. DFS is a simple yet incredibly powerful algorithm designed to explore
+                    and analyze tree or graph structures. It&#39s used in a wide range of applications, from pathfinding
+                    and scheduling to puzzle-solving and game logic.
+                    Think of it like exploring a maze: you keep moving forward until you reach a dead end, then
+                    backtrack and try a new path. That&#39s the essence of DFS, diving deep into one direction before
+                    stepping back to uncover every possibility.
+                </p>
+                <br>
+                <p>
+                <header style="margin-left:10%"><strong>What Is DFS?</strong></header>
+                </p>
+                <p>
+                    DFS is all about exploring one path as far as possible before turning back. Imagine diving deep into
+                    a tunnel until you hit a dead end, then retracing your steps to explore the other tunnels you
+                    passed.
+                </p>
+                <p>
+                    But DFS isn&#39t just theoretical but appears everywhere in computer science and real-world
+                    applications. Although at the surface, it seems only viable for path-finding or maze solving, it is
+                    capable of detecting cycles in graphs, performing topological sorting for scheduling tasks, solving
+                    puzzles like Sudoku or the N-Queens problem, and finding connected components in networks.
+                </p>
+                <p>
+                    In short, DFS is like the ultimate explorer, simple, systematic, and surprisingly powerful. However,
+                    it is important to notethat recursive DFS can sometimes lead to a stack overflow when the graph is
+                    very deep (e.g., over 100,000 nodes). The iterative version may avoid this issue by managing the
+                    stack manually.
+                </p>
+                <br>
+                <div style="margin-left:10%">
+                    <header><strong>How It Works</strong></header>
+                    <p>
+                    <ol style="line-height:2">
+                        <li>Start at a node (e.g., the root or any chosen vertex).</li>
+                        <li>Mark it as visited.</li>
+                        <li>Visit an adjacent unvisited node (e.g., go deeper).</li>
+                        <li>If no unvisited neighbors remain, backtrack to the previous node.</li>
+                        <li>Repeat until all nodes have been visited, or until a specific goal has been achieved.</li>
+                    </ol>
+                    </p>
+                </div>
+                <br>
+                <p>
+                    There are two main ways to write DFS: (1) <strong>Recursively</strong>, where the function keeps
+                    calling itself using
+                    the system&#39s call stack; (2) <strong>Iteratively</strong>, where you use your own stack to keep
+                    track of where to go
+                    next.
+                </p>
+                <div style="text-align:center">
+                    <img style="height:auto; width:40%" src="../Images/Blog-Image/Blog5/blog 5_DFS_2.jpg">
+                    <p>(Example: finding all possible paths from node 0 to node 5)</p>
+                </div>
+                <br>
+                <p><strong>DFS in Python</strong></p>
+                <div style="text-align:center">
+                    <img style="height:auto; width:35%" src="../Images/Blog-Image/Blog5/Python Dfs.png">
+                    <p><strong>Prints out:</strong></p>
+                    <img style="height:auto; width:35%" src="../Images/Blog-Image/Blog5/Python DFS results.png">
+                </div>
+                <br>
+                <header style="margin-left:10%"><strong>My Takeaways</strong></header>
+                <p>
+                    Learning DFS is a simple algorithm on the surface, but once you explore the nooks and crannies of
+                    all of its possible uses, it is a basic building block that helps with other algorithms and more
+                    than just a path algorithm. DFS also serves as the foundation for many advanced algorithms in
+                    computer science. Whether you&#39re working on a graph problem, solving a tricky puzzle, or tackling a
+                    USACO challenge, DFS shows how elegant recursion can be!
+                </p>
+                <br>
+                <p>
+                    DFS goes deep before it goes wide, following one path all the way down before backtracking to
+                    explore others. However, keep in mind that recursive DFS can sometimes lead to a stack overflow when
+                    the graph is very deep (e.g., over 100,000 nodes). The iterative version may avoid this issue by
+                    managing the stack manually.
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer>
+    </footer>
+</body>
+
+</html>
