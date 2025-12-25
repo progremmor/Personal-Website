@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../sideBar.css">
+    <title>Blog Posts</title>
+</head>
+
+<body>
+    <div class="formatGrid" z-index="-2">
+        <h1 id="Blog">
+            <div class="Headertext">
+                <title>Blog Posts</title>
+            </div>
+        </h1>
+        <div id="sideCol">
+            <div id="LeButtons">
+                <ul>
+                    <li><a z-index="4" href="../index.html"><strong>Home</strong></a></li>
+                    <li><a z-index="4" href="Blog.html"><strong>Blog Posts</strong></a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="body">
+            <p style="justify-self: center;"><strong>Exploring Breadth First Search (BFS) Algorithm</strong></p>
+            <p style="justify-self: center;"><strong>December 24, 2025</strong></p>
+            <p><br></p>
+            <div style="justify-self: center;">
+                <div style="text-align:center">
+                    <img style="justify-self:center;;width:15vw; height:auto" src="../Images/Blog-Image/Blog6/BFSCover.png">
+                </div>
+                <p>We talked
+                    about <strong style="font-weight: bold;">Depth First Search (DFS)</strong> last time, the algorithm
+                    that dives deep into one path before backtracking. Let&rsquo;s explore another way to navigate a
+                    graph, <strong>Breadth First Search (BFS)</strong>.</p>
+                <p>If DFS is
+                    like exploring a maze by going as far as you can down one hallway until hitting the wall, BFS is
+                    more like exploring <strong style="font-weight: bold;">all paths at the same time</strong>. You
+                    start at the entrance, check out all the doors you can reach in one move, then explore the rooms
+                    behind those doors, and keep going outward. It is a step-by-step/layer-by-layer approach, which
+                    makes BFS great for finding the shortest path or figuring out how everything is connected.</p>
+                <p><br>&nbsp;
+                </p>
+                <p><strong
+                        style="font-weight: bold;">What Is BFS?&nbsp;</strong></p>
+                <p>BFS is a
+                    method for visiting every node in a graph. It works by exploring all nearby nodes first,+ then
+                    gradually moving farther away. It explores everything close to the starting point before moving
+                    outward. Here is how it works:</p>
+                <ol>
+                    <li>
+                        <p style="padding:0;margin:0">
+                            Start at your chosen node (the &ldquo;source&rdquo;).</p>
+                    </li>
+                    <li>
+                        <p  style="padding:0;margin:0">
+                            Visit it and mark it as visited so you don&rsquo;t re peat it.</p>
+                    </li>
+                    <li>
+                        <p  style="padding:0;margin:0">Add
+                            it to a queue (a line where the first in is the first out).</p>
+                    </li>
+                    <li>
+                        <p  style="padding:0;margin:0">
+                            While the queue isn&rsquo;t empty: Take the first node from the queue; then visit all its
+                            un-visited neighbors and add them to the queue.</p>
+                    </li>
+                    <li>
+                        <p  style="padding:0;margin:0">
+                            Keep going until everything reachable has been visited.</p>
+                    </li>
+                </ol>
+                <p><br>&nbsp;
+                </p>
+                <p><strong
+                        style="font-weight: bold;">Example Problem</strong></p>
+                <p>Let&rsquo;s
+                    revisit the same coding challenge as an example: finding all possible paths from node 0 to node 5
+                    where each path is strictly ascending.</p>
+                <p style="text-align: center;background: transparent;line-height: 116%;margin-bottom: 0.11in;">&nbsp;
+                </p>
+                <div style="text-align:center">
+                    <img style="justify-self:center;;width:15vw; height:auto" src="../Images/Blog-Image/Blog6/BFSExample.png">
+                </div>
+                <p>The BFS
+                    traversal process is illustrated step-by-step below. Instead of enqueuing single nodes, we enqueue
+                    partial paths.</p>
+                <ul>
+                    <li>
+                        <p  style="padding:0;margin:0">
+                            <strong style="font-weight: bold;">Step 1:</strong> Start at 0.</p>
+                        <ul>
+                            <li>
+                                <p  style="padding:0;margin:0"
+                                   >
+                                    Neighbors of 0: 1, 2</p>
+                            </li>
+                            <li>
+                                <p  style="padding:0;margin:0"
+                                   >
+                                    Queue: <span style="color: rgb(0, 0, 0);">[0,1], [0,2]</span></p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p  style="padding:0;margin:0">
+                            <strong style="font-weight: bold;">Step 2:</strong><span style="color: rgb(0, 0, 0);">Expand
+                                <strong style="font-weight: bold;">[0,1].</strong></span></p>
+                        <ul>
+                            <li>
+                                <p  style="padding:0;margin:0"
+                                   >
+                                    Neighbors of 1: 2, 3, 4</p>
+                            </li>
+                            <li>
+                                <p  style="padding:0;margin:0"
+                                   >
+                                    Queue<span style="color: rgb(0, 0, 0);">: [0,2],&nbsp;</span><span
+                                        style="color: rgb(0, 0, 255);">[0,1,2], [0,1,3], [0,1,4]</span></p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p  style="padding:0;margin:0">
+                            <strong style="font-weight: bold;">Step 3:</strong><span style="color: rgb(0, 0, 0);">Expand
+                                <strong style="font-weight: bold;">[0,2].</strong></span></p>
+                        <ul>
+                            <li>
+                                <p  style="padding:0;margin:0"
+                                   >
+                                    Neighbors of 2: 3, 4</p>
+                            </li>
+                            <li>
+                                <p  style="padding:0;margin:0"
+                                   >
+                                    Queue<span style="color: rgb(0, 0, 0);">: [0,1,2], [0,1,3],
+                                        [0,1,4],&nbsp;</span><span style="color: rgb(0, 0, 255);">[0,2,3],
+                                        [0,2,4]</span></p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p  style="padding:0;margin:0">
+                            <strong style="font-weight: bold;">Step 4:</strong> Expand <strong>[0,1,2]</strong></p>
+                        <ul>
+                            <li>
+                                <p  style="padding:0;margin:0"
+                                   >
+                                    Neighbors of 2: 3, 4</p>
+                            </li>
+                            <li>
+                                <p  style="padding:0;margin:0"
+                                   >
+                                    Queue<span style="color: rgb(0, 0, 0);">: [0,1,3], [0,1,4], [0,2,3],
+                                        [0,2,4],&nbsp;</span><span style="color: rgb(0, 0, 255);">[0,1,2,3],
+                                        [0,1,2,4]</span></p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p  style="padding:0;margin:0">
+                            <strong style="font-weight: bold;">Step 5:</strong> Expand <strong>[0,1,3]</strong></p>
+                        <ul>
+                            <li>
+                                <p  style="padding:0;margin:0"
+                                   >
+                                    Neighbors of 3: 4, 5</p>
+                            </li>
+                            <li>
+                                <p  style="padding:0;margin:0"
+                                   >
+                                    <span style="color: rgb(255, 0, 0);"><strong
+                                            style="font-weight: bold;">[0,1,3,5]</strong><strong
+                                            style="font-weight: bold;">hits target
+                                            &rarr;</strong><strong>record</strong></span></p>
+                            </li>
+                            <li>
+                                <p  style="padding:0;margin:0"
+                                   >
+                                    Queue<span style="color: rgb(0, 0, 0);"><strong style="font-weight: bold;">:
+                                            [0,1,4], [</strong>0,2,3], [0,2,4], [0,1,2,3], [0,1,2,4],&nbsp;</span><span
+                                        style="color: rgb(0, 0, 255);">[0,1,3,4]</span></p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p  style="padding:0;margin:0">
+                            <strong style="font-weight: bold;">Step 6:</strong> Expand <strong>[0,1,4]</strong></p>
+                        <ul>
+                            <li>
+                                <p  style="padding:0;margin:0"
+                                   >
+                                    Neighbors of 4: 5</p>
+                            </li>
+                            <li>
+                                <p  style="padding:0;margin:0"
+                                   >
+                                    <span style="color: rgb(255, 0, 0);"><strong
+                                            style="font-weight: bold;">[0,1,4,5]</strong><strong
+                                            style="font-weight: bold;">hits target
+                                            &rarr;</strong><strong>record</strong></span></p>
+                            </li>
+                            <li>
+                                <p  style="padding:0;margin:0"
+                                   >
+                                    Queue<span style="color: rgb(0, 0, 0);">: [0,2,3], [0,2,4], [0,1,2,3], [0,1,2,4],
+                                        [0,1,3,4]</span></p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p  style="padding:0;margin:0">
+                            <strong style="font-weight: bold;">Step 7:</strong> Expand <strong>[0,2,3]</strong></p>
+                        <ul>
+                            <li>
+                                <p  style="padding:0;margin:0"
+                                   >
+                                    Neighbors of 3: 4, 5</p>
+                            </li>
+                            <li>
+                                <p  style="padding:0;margin:0"
+                                   >
+                                    <span style="color: rgb(255, 0, 0);"><strong
+                                            style="font-weight: bold;">[0,2,3,5]</strong><strong
+                                            style="font-weight: bold;">hits target
+                                            &rarr;</strong><strong>record</strong></span></p>
+                            </li>
+                            <li>
+                                <p  style="padding:0;margin:0"
+                                   >
+                                    Queue<span style="color: rgb(0, 0, 0);"><strong
+                                            style="font-weight: bold;">:&nbsp;</strong>[0,2,4], [0,1,2,3], [0,1,2,4],
+                                        [0,1,3,4], [0,2,3,4]</span></p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p  style="padding:0;margin:0">
+                            <strong style="font-weight: bold;">Step 8:</strong> Expand <strong>[0,2,4]</strong></p>
+                        <ul>
+                            <li>
+                                <p  style="padding:0;margin:0"
+                                   >
+                                    Neighbors of 4: 5</p>
+                            </li>
+                            <li>
+                                <p  style="padding:0;margin:0"
+                                   >
+                                    <span style="color: rgb(255, 0, 0);"><strong
+                                            style="font-weight: bold;">[0,2,4,5]</strong><strong>hits target &rarr;
+                                            record</strong></span></p>
+                            </li>
+                            <li>
+                                <p  style="padding:0;margin:0"
+                                   >
+                                    Queue<span style="color: rgb(0, 0, 0);"><strong
+                                            style="font-weight: bold;">:&nbsp;</strong>[0,1,2,3], [0,1,2,4], [0,1,3,4],
+                                        [0,2,3,4]</span></p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p style="padding:0;margin:0">
+                            <strong style="font-weight: bold;">Step 8:</strong> Expand <strong>[0,1,2,3]</strong></p>
+                        <ul>
+                            <li>
+                                <p style="padding:0;margin:0"
+                                   >
+                                    Neighbors of 3: 4, 5</p>
+                            </li>
+                            <li>
+                                <p style="padding:0;margin:0"
+                                   >
+                                    <span style="color: rgb(255, 0, 0);"><strong
+                                            style="font-weight: bold;">[0,1,2,3,5]</strong><strong
+                                            style="font-weight: bold;">hits target
+                                            &rarr;</strong><strong>record</strong></span></p>
+                            </li>
+                            <li>
+                                <p style="padding:0;margin:0"
+                                   >
+                                    Queue<span style="color: rgb(0, 0, 0);"><strong
+                                            style="font-weight: bold;">:&nbsp;</strong>[0,1,2,4], [0,1,3,4],
+                                        [0,2,3,4],&nbsp;</span><span style="color: rgb(0, 0, 255);">[0,1,2,3,4]</span>
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p style="padding:0;margin:0">
+                            <strong style="font-weight: bold;">Step 9:</strong> Expand <strong>[0,1,2,4]</strong></p>
+                        <ul>
+                            <li>
+                                <p style="padding:0;margin:0"
+                                   >
+                                    Neighbors of 4: 5</p>
+                            </li>
+                            <li>
+                                <p style="padding:0;margin:0"
+                                   >
+                                    <span style="color: rgb(255, 0, 0);"><strong
+                                            style="font-weight: bold;">[0,1,2,4,5]</strong><strong
+                                            style="font-weight: bold;">hits target
+                                            &rarr;</strong><strong>record</strong></span></p>
+                            </li>
+                            <li>
+                                <p style="padding:0;margin:0"
+                                   >
+                                    Queue<span style="color: rgb(0, 0, 0);"><strong
+                                            style="font-weight: bold;">:&nbsp;</strong>[0,1,3,4], [0,2,3,4],
+                                        [0,1,2,3,4]</span></p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p style="padding:0;margin:0">
+                            <strong style="font-weight: bold;">Step 10:</strong> Expand <strong>[0,1,3,4]</strong></p>
+                        <ul>
+                            <li>
+                                <p style="padding:0;margin:0"
+                                   >
+                                    Neighbors of 4: 5</p>
+                            </li>
+                            <li>
+                                <p style="padding:0;margin:0"
+                                   >
+                                    <span style="color: rgb(255, 0, 0);"><strong
+                                            style="font-weight: bold;">[0,1,3,4,5]</strong><strong
+                                            style="font-weight: bold;">hits target
+                                            &rarr;</strong><strong>record</strong></span></p>
+                            </li>
+                            <li>
+                                <p style="padding:0;margin:0"
+                                   >
+                                    Queue<span style="color: rgb(0, 0, 0);"><strong
+                                            style="font-weight: bold;">:&nbsp;</strong>[0,2,3,4], [0,1,2,3,4]</span></p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p style="padding:0;margin:0">
+                            <strong style="font-weight: bold;">Step 10:</strong> Expand <strong>[0,2,3,4]</strong></p>
+                        <ul>
+                            <li>
+                                <p style="padding:0;margin:0"
+                                   >
+                                    Neighbors of 4: 5</p>
+                            </li>
+                            <li>
+                                <p style="padding:0;margin:0"
+                                   >
+                                    <span style="color: rgb(255, 0, 0);"><strong
+                                            style="font-weight: bold;">[0,2,3,4,5]</strong><strong
+                                            style="font-weight: bold;">&nbsp;hits target &rarr;</strong>
+                                        <strong>record</strong></span></p>
+                            </li>
+                            <li>
+                                <p style="padding:0;margin:0"
+                                   >
+                                    Queue<span style="color: rgb(0, 0, 0);"><strong
+                                            style="font-weight: bold;">:&nbsp;</strong>[0,1,2,3,4]</span></p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p style="padding:0;margin:0">
+                            <strong style="font-weight: bold;">Step 11:</strong> Expand <strong>[0,1,2,3,4]</strong></p>
+                        <ul>
+                            <li>
+                                <p style="padding:0;margin:0"
+                                   >
+                                    Neighbors of 4: 5</p>
+                            </li>
+                            <li>
+                                <p style="padding:0;margin:0"
+                                   >
+                                    <span style="color: rgb(255, 0, 0);"><strong
+                                            style="font-weight: bold;">[0,1,2,3,4,5]</strong><strong>&nbsp;hits target
+                                            &rarr; record</strong></span></p>
+                            </li>
+                            <li>
+                                <p style="padding:0;margin:0"
+                                   >
+                                    <span style="color: rgb(0, 0, 255);"><strong style="font-weight: bold;">Queue
+                                            empty&nbsp;</strong><strong></strong><strong>&nbsp;mission
+                                            accomplished!</strong></span></p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>All
+                    BFS-discovered paths from 0 to 5 (shortest to longest) are summarized as follows:</p>
+                <ol>
+                    <li>
+                        <p style="padding:0;margin:0">
+                            <strong style="font-weight: bold;">Length 3 (shortest): [</strong>0,1,3 ,5], [0,1,4 ,5],
+                            [0,2,3,5], [0,2,4,5]</p>
+                    </li>
+                    <li>
+                        <p style="padding:0;margin:0">
+                            <strong style="font-weight: bold;">Length 4:</strong> [0,1,2 ,3 ,5], [0,1,2,4,5],
+                            [0,1,3,4,5], [0,2,3,4,5]</p>
+                    </li>
+                    <li>
+                        <p style="padding:0;margin:0">
+                            <strong style="font-weight: bold;">Length 5 (longest):</strong> [0,1,2,3,4,5]</p>
+                    </li>
+                    <li>
+                        <p style="padding:0;margin:0">
+                            There are <strong style="font-weight: bold;">9 total paths</strong> from 0 to 5 in the
+                            strict ascending order.</p>
+                    </li>
+                </ol>
+                <div style="text-align:center">
+                    <img style="justify-self:center;;width:15vw; height:auto" src="../Images/Blog-Image/Blog6/BFSSolution.png">
+                </div>
+                <p><br>&nbsp;
+                </p>
+                <p><strong
+                        style="font-weight: bold;">Why BFS Matters?</strong></p>
+                <p>It is
+                    obvious that BFS works quite differently from DFS. BFS guarantees the shortest path appears first
+                    because it expands by levels, while DFS may quickly reach the target but not necessarily via the
+                    shortest route. BFS is <strong style="font-weight: bold;">memory-intensive</strong> for large
+                    branching factors; DFS is <strong>stack-intensive</strong> for deep graphs.</p>
+                <p>BFS
+                    isn&rsquo;t just a theoretical concept. It powers many systems in our daily life. For example,</p>
+                <ul style="margin-left:10%">
+                    <li>
+                        <p style="padding:0;margin:0">
+                            <strong>Route Optimization in Maps and Games.&nbsp;</strong>BFS helps find the shortest path
+                            between locations, ensuring efficient navigation in GPS systems and game environments.</p>
+                    </li>
+                    <li>
+                        <p style="padding:0;margin:0">
+                            <strong>Web Crawlers.&nbsp;</strong>Search engines use BFS-like strategies to discover
+                            websites link by link, indexing pages layer by layer.</p>
+                    </li>
+                    <li>
+                        <p style="padding:0;margin:0">
+                            <strong>Social Network Analysis.&nbsp;</strong>BFS measures degrees of separation between
+                            people, enabling features like &ldquo;friends of friends&rdquo; and connection
+                            recommendations.</p>
+                    </li>
+                    <li>
+                        <p style="padding:0;margin:0">
+                            <strong>AI Pathfinding.&nb sp;</strong>Robots and puzzle-solving algorithms rely on BFS to
+                            navigate environments safely and efficiently.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+    </footer>
+</body>
+
+</html>

@@ -29,9 +29,11 @@ header{
 }
 ol{
     font-family:'Arial';
+    margin-left:10%;
 }
 ul{
     font-family:'Arial';
+    margin-left:10%
 }
 li{
     font-family:'Arial';
