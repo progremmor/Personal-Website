@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../sideBar.css">
+    <title>Blog Posts</title>
+</head>
+
+<body>
+    <div class="formatGrid" z-index="-2">
+        <h1 id="Blog">
+            <div class="Headertext">
+                <title>Blog Posts</title>
+            </div>
+        </h1>
+
+        <div id="sideCol">
+            <div id="LeButtons">
+                <ul>
+                    <li><a z-index="4" href="../index.html"><strong>Home</strong></a></li>
+                    <li><a z-index="4" href="Blog.html"><strong>Blog Posts</strong></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="body">
+            <p style="justify-self: center;">
+                <strong>My First Machine Learning Project: What Worked and What Didn’t in Predicting Severe Weather</strong>
+            </p>
+            <p style="justify-self: center;">
+                <strong>June 15, 2026</strong>
+            </p>
+            <p><br></p>
+
+            <div style="justify-self: center;">
+
+                <!-- Cover Image -->
+                <div style="text-align:center">
+                    <img style="justify-self:center; width:30vw; height:auto"
+                        src="../Images/Blog-Image/Blog12/Blog12Cover.png"
+                        alt="Machine Learning Weather Project cover image">
+                </div>
+
+                <p><br></p>
+
+                <p><strong>Introduction</strong></p>
+
+                <p>
+                    Severe weather events, such as extreme rainfall, strong winds, and snowstorms, can have major impacts
+                    on safety, infrastructure, and daily life. This project explores how machine learning can be used to
+                    better understand and predict these events using publicly available weather data.
+                </p>
+
+                <p>
+                    This was my first full machine learning project, where I worked through the entire pipeline—from data
+                    preprocessing to model evaluation—using a Multi-Layer Perceptron (MLP) model.
+                </p>
+
+                <p><br></p>
+
+                <p><strong>Why I Chose an MLP Model</strong></p>
+
+                <p>
+                    Weather systems are highly nonlinear, meaning small changes in atmospheric conditions can lead to very
+                    different outcomes. MLPs, which are neural networks with multiple hidden layers and nonlinear activation
+                    functions, are well suited for capturing these complex patterns.
+                </p>
+
+                <p>
+                    The goal was not to replace traditional weather models, but to explore whether machine learning could
+                    serve as a complementary tool for identifying early signals of severe weather.
+                </p>
+
+                <p><br></p>
+
+                <p><strong>What Worked Well</strong></p>
+
+                <p>
+                    One of the most rewarding outcomes was that the model successfully learned meaningful patterns from the
+                    data. It performed better than random chance when distinguishing between severe and non-severe weather.
+                </p>
+
+                <p>
+                    Another key improvement came from addressing class imbalance. Severe weather events are rare, which initially
+                    caused the model to under-predict them. After applying SMOTE oversampling, the model became significantly
+                    better at detecting these rare events without losing overall accuracy.
+                </p>
+
+                <p><br></p>
+
+                <p><strong>Challenges I Didn’t Expect</strong></p>
+
+                <p><strong>1. Extreme Data Imbalance</strong></p>
+                <p>
+                    The rarity of severe weather events made it difficult for the model to learn effectively. This highlighted
+                    the importance of preprocessing techniques like oversampling in real-world machine learning problems.
+                </p>
+
+                <p><strong>2. Computational Cost and Time</strong></p>
+                <p>
+                    Training the model required more computational power than expected. Running experiments locally became slow,
+                    so I moved the workflow to Google Colab, which provided access to cloud-based GPUs and significantly improved
+                    training efficiency.
+                </p>
+
+                <p><strong>3. Model Interpretability</strong></p>
+                <p>
+                    Understanding why the model made certain predictions was challenging. Neural networks combine features in
+                    complex ways, which improves accuracy but reduces interpretability. This revealed an important trade-off
+                    in machine learning.
+                </p>
+
+                <p><br></p>
+
+                <p><strong>Key Lessons Learned</strong></p>
+
+                <p>
+                    This project showed that machine learning is not a plug-and-play solution. Model performance depends heavily
+                    on data quality, preprocessing, and computational resources.
+                </p>
+
+                <p>
+                    It also emphasized that discussing limitations—such as data imbalance and interpretability—is just as important
+                    as reporting performance metrics.
+                </p>
+
+                <p>
+                    Most importantly, this experience demonstrated how computer science and data science can be applied to
+                    real-world problems with meaningful impact.
+                </p>
+
+                <p><br></p>
+
+                <p><strong>Final Thoughts</strong></p>
+
+                <p>
+                    This project was my first deep dive into applied machine learning research. It challenged me to think critically
+                    about data, model design, and computational constraints.
+                </p>
+
+                <p>
+                    It strengthened my interest in exploring the intersection of computer science, data science, and Earth science,
+                    and motivated me to continue working on real-world, impactful problems.
+                </p>
+
+                <p><br></p>
+
+                <p style="font-size:18px;"><strong>Reference:</strong></p>
+
+                <!-- PDF Link -->
+                <div style="text-align:center;">
+                    <a href="https://www.curieuxreview.com/_files/ugd/60ed3c_5ffa797ee93f432e9b38f53b12c1d21d.pdf"
+                        target="_blank" style="text-decoration:none; color:black;">
+
+                        <img style="transform:scale(0.8)" src="../Images/Blog-Image/Blog12/thumbNail.png"
+                            alt="Curieux Review paper preview"
+                            style="width:40vw; max-width:600px; border-radius:10px; display:block; margin:auto;">
+
+                        <p style="margin-top:10px;">
+                            View Full Paper – The Curieux Review
+                        </p>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+    </footer>
+</body>
+
+</html>
