@@ -7,6 +7,45 @@
     <title>Can AI Design Responsible Home-Care Robots? | Blog</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../sideBar.css">
+    <style>
+        #body .blog15-content {
+            box-sizing: border-box;
+            width: 100%;
+            min-width: 0;
+            padding: 0 1rem;
+        }
+
+        #body .blog15-content img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        #body .blog15-content .blog15-cover {
+            width: min(100%, 850px) !important;
+        }
+
+        #body .blog15-content .responsive-table {
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+
+        #body .blog15-content table {
+            box-sizing: border-box;
+            width: 100%;
+            min-width: 0 !important;
+            table-layout: fixed;
+        }
+
+        #body .blog15-content th,
+        #body .blog15-content td {
+            overflow-wrap: anywhere;
+            word-break: normal;
+        }
+    </style>
 </head>
 
 <body>
@@ -31,9 +70,9 @@
             <p style="justify-self: center;"><strong>November 5, 2026</strong></p>
             <p><br></p>
 
-            <div style="justify-self: center;">
+            <div class="blog15-content" style="justify-self: center;">
                 <div style="text-align:center">
-                    <img style="justify-self:center; width:min(80vw, 850px); height:auto;"
+                    <img class="blog15-cover" style="justify-self:center; width:min(80vw, 850px); height:auto;"
                         src="../Images/Blog-Image/Blog15/Blog15Cover.png"
                         alt="Study workflow comparing four AI models for home-care robot design">
                 </div>
@@ -80,8 +119,8 @@
                     The study compared twelve AI-generated designs. I used a structured rubric with five domains, scoring each from 1 to 5. A design could receive a total score from 5 to 25; higher scores indicated stronger performance across the evaluation criteria.
                 </p>
 
-                <div style="overflow-x:auto; margin:1em 0;">
-                    <table style="border-collapse:collapse; width:100%; min-width:520px;">
+                <div class="responsive-table" style="overflow-x:auto; margin:1em 0;">
+                    <table style="border-collapse:collapse; width:100%;">
                         <caption style="text-align:left; padding:0.5em;"><strong>Evaluation rubric</strong></caption>
                         <thead>
                             <tr>
@@ -118,8 +157,8 @@
                     In the overall comparison, ChatGPT received the highest average score (23.67 out of 25). Claude and Gemini were close behind, while DeepSeek's average was lower. The scenario scores show that performance also depended on the type of care the design was meant to support.
                 </p>
 
-                <div style="overflow-x:auto; margin:1em 0;">
-                    <table style="border-collapse:collapse; width:100%; min-width:520px;">
+                <div class="responsive-table" style="overflow-x:auto; margin:1em 0;">
+                    <table style="border-collapse:collapse; width:100%;">
                         <caption style="text-align:left; padding:0.5em;"><strong>Scores by care scenario</strong></caption>
                         <thead>
                             <tr>
